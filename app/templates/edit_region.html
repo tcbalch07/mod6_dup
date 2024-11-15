@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Edit Region</h1>
+<div class="container mt-4">
+    <form action="{{ url_for('regions.edit_region', region_id=region['region_id']) }}" method="post">
+        <div class="form-group">
+            <label for="region_name">Region Name</label>
+            <input type="text" class="form-control" id="region_name" name="region_name" value="{{ region['region_name'] }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Region</button>
+    </form>
+</div>
+{% endblock %}

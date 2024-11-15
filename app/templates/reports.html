@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Reports</h1>
+<div class="container mt-4">
+    <h2>Total Sales by Region</h2>
+    <div>{{ total_sales_by_region | safe }}</div>
+
+    <h2>Monthly Sales Trend</h2>
+    <div>{{ monthly_sales_trend | safe }}</div>
+
+    <h2>Top-Performing Region</h2>
+    <p><strong>{{ top_region }}</strong></p>
+</div>
+{% endblock %}
